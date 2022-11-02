@@ -1,0 +1,110 @@
+/*
+Challenge:
+Center the text in the <p> and <h4> elements.
+
+Note: you should only add ONE property, as inheritance 
+should take care of applying it to both elements.
+*/
+body {
+    margin: 20px;
+    margin-left: auto;
+    margin-right:auto;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.img-profile {
+    width: 150px;
+    border-radius: 5px;
+}
+
+.align-to-center {
+    margin: auto auto;
+}
+.card {
+    display:flex;
+    padding: 20px;
+    justify-content: space-around;
+    /*
+    Challenge:
+    Give the card a width of 400px wide and center it.
+    */
+    width: 400px;
+    /* Esto lo hacen los noobs 
+    margin-left: auto;
+    margin-right: auto; 
+    text-align: center; 
+    */ 
+    /* Esto lo hacen los pros
+    Challenge:
+    Replace the two margin properties with a 
+    single margin shorthand.
+    margin: 0px auto 0px auto; 
+    margin: 0px auto;*/ 
+    margin: 0px auto;
+
+    /* 
+    Challenge:
+    Add colors to the card according to the design.
+    black - #2b2839 (the text color)
+    blue - #ddebf8
+    purple - #d8cefe
+    */
+    color: #353146;
+    background-color: #bcc4f1;
+    border-bottom: 7px solid #89b1cc;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+
+    /* SOMBRAS */
+    box-shadow:2px 2px #3531467e;
+    text-shadow: 1px 1px #3531462a;
+}
+
+/* EFECTO HOVER  & ANIMACIONES */
+.card:hover {
+    background-color: #ffff66;
+    border-bottom-color: #ffde71;
+    
+    justify-content: space-around;
+    animation-name: example;
+    animation-duration: 7s;
+}
+.img-profile:hover {
+    animation-name: example1;
+    animation-duration: 7s;
+}
+
+@keyframes example {
+    from {
+        width: 400px;
+        height: 180px;
+        background-color: #bcc4f1;
+        border-bottom: 7px solid #89b1cc;
+    }
+    to {
+        width: 560px;
+        height: 350px;
+        background-color: #ffff66;
+        border-bottom-color: #ffde71;
+    }
+}
+
+@keyframes example1 {
+    from {
+        width: 150px;
+    }
+    to {
+        width: 300px;
+    }
+}
+
+
+/*
+Challenge:
+Create a utility class for the dotted blue border.
+Give the class to both flexbox children in the HTML.
+
+.border-dotted {
+    border: 1px dotted blue;
+}
+*/
